@@ -1,0 +1,36 @@
+{
+  "provisioners": [
+	{
+		"type": "shell",
+		"scripts": [
+		"scripts/base.sh",
+		"scripts/vmwaretools.sh",
+		"scripts/cleanup.sh"
+		]
+	}
+	],
+"builders": [
+{
+    "vm_name": "centos65",
+    "type": "vmware-iso",
+    "guest_os_type": "centos-64",
+    "http_directory": "http",
+	"iso_checksum": "0d9dc37b5dd4befa1c440d2174e88a87",
+      "iso_checksum_type": "md5",
+      "iso_url": "http://mirrors.cat.pdx.edu/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-minimal.iso",
+    "ssh_username": "root",
+    "ssh_password": "password",
+    "ssh_wait_timeout": "10000s",
+	"tools_upload_flavor": "linux",
+    "boot_command": [
+      "<tab> text ks=http://192.168.1.71:{{ .HTTPPort}}/ks.cfg<enter>"
+    ],
+    "shutdown_command": "shutdown -P now",
+    "disk_size": 20280,
+    "vmx_data": {
+      "memsize": "2048",
+      "numvcpus": "1",
+      "cpuid.coresPerSocket": "1"
+    }
+   	}]
+	}
