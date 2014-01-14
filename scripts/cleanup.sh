@@ -9,7 +9,6 @@ rm -f /EMPTY
 echo "Ensuring udev doesn't mess with the network..."
 ln -sf /dev/null /lib/udev/rules.d/75-persistent-net-generator.rules
 rm -f /etc/udev/rules.d/70-persistent-net.rules
-mkdir /etc/udev/rules.d/70-persistent-net.rules
 
 # On startup, remove HWADDR from the eth0 interface.
 echo "Preparing network...."
