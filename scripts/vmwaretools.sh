@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install VMWare Tools 
 echo "Installing VMWare Tools..."
 cd /tmp

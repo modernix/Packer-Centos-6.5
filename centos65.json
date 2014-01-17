@@ -5,6 +5,7 @@
 		"scripts": [
 		"scripts/base.sh",
 		"scripts/vmwaretools.sh",
+		"scripts/zerodisk.sh",
 		"scripts/cleanup.sh"
 		]
 	}
