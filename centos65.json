@@ -21,8 +21,9 @@
     "guest_os_type": "centos-64",
     "http_directory": "http",
 	"iso_checksum": "0d9dc37b5dd4befa1c440d2174e88a87",
-      "iso_checksum_type": "md5",
-      "iso_url": "http://mirrors.cat.pdx.edu/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-minimal.iso",
+    "iso_checksum_type": "md5",
+    "iso_url": "http://mirrors.cat.pdx.edu/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-minimal.iso",
+	"output_directory": "../packer_builds/centos65/",
     "ssh_username": "vagrant",
     "ssh_password": "vagrant",
     "ssh_wait_timeout": "10000s",
@@ -40,7 +41,8 @@
    	}],
 	"post-processors": [{
 		"type": "vagrant",
-		"output": "centos65.box"
+		"keep_input_artifact": true,
+		"output": "../vagrant_boxes/packer_centos65_{{.Provider}}.box"
 	}]
 	}
 	

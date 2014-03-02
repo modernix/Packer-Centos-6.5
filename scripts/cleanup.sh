@@ -1,7 +1,7 @@
 # Remove the junk in /tmp
 rm -rf /tmp/*
 
-# Make sure udev doesn't block our network
+# Ensure udev doesn't mess with the network
 echo "Ensuring udev doesn't mess with the network..."
 rm -f /etc/udev/rules.d/70-persistent-net.rules
 sed -i 's/^HWADDR.*$//' /etc/sysconfig/network-scripts/ifcfg-eth0
