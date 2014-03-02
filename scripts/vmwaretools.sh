@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-yum erase -y fuse
+#yum erase -y fuse
 
 # Install VMWare Tools 
 echo "Installing VMWare Tools..."
