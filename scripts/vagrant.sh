@@ -1,3 +1,5 @@
+#!/bin/bash -eux
+
 # Add the Vagrant User - In case this fails in the kickstart file 
 /usr/sbin/groupadd vagrant
 /usr/sbin/useradd vagrant -g vagrant -G wheel

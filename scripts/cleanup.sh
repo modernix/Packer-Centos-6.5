@@ -1,3 +1,5 @@
+#!/bin/bash -eux
+
 # Remove the junk in /tmp
 rm -rf /tmp/*
 
