@@ -4,7 +4,7 @@
 yum -y groupinstall base
 
 #echo "Installing some other packages for things like VMWare tools..."
-yum -y install gcc make curl wget sudo perl fuse-libs nfs-utils
+yum -y install gcc make curl wget sudo perl fuse-libs nfs-utils telnet
 
 echo "Updating packages..."
 yum -y update
